@@ -45,6 +45,7 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
               WebkitBoxOrient: "vertical"
              }}
               size="14px"
+              lineClamp={3}
               transform="capitalize"
               weight="600"
               color="primary-blue.0"
