@@ -36,7 +36,6 @@ const Header: React.FC = () => {
           alignItems: "center",
           gap: "1rem",
           justifyContent: "flex-start",
-          width: '205px'
         }}
       >
         <Box sx={{ height: "30px", display: "flex", alignItems: "center" }}>
