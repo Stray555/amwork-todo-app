@@ -8,7 +8,9 @@ const TodoSkeletonItem: React.FC = () => {
       <Skeleton sx={MarginStyle} height={8} radius="xl" />
       <Skeleton sx={MarginStyle} height={8} mt={6} radius="xl" />
       <Skeleton sx={MarginStyle} height={8} mt={6} width="70%" radius="xl" />
-      <Skeleton sx={MarginStyle} height={50} circle mb="md" />
+      <Box sx={{ marginTop: "1rem", marginBottom: "0", marginLeft: "auto" }}>
+        <Skeleton height={50} circle mb="md" />
+      </Box>
     </Card>
   );
 };
@@ -21,11 +23,11 @@ const TodoLoadingSkeleton: React.FC = () => {
         width: "320px",
         display: "flex",
         flexDirection: "column",
-        gap: "1rem",
+        gap: "1rem"
       }}
     >
       {Array.from({ length: 5 }).map((_item, index) => (
-        <TodoSkeletonItem key={index}></TodoSkeletonItem>
+        <TodoSkeletonItem key={index} />
       ))}
     </Box>
   );
@@ -34,6 +36,6 @@ const TodoLoadingSkeleton: React.FC = () => {
 export default TodoLoadingSkeleton;
 
 const MarginStyle = {
-  marginTop: "0.1rem",
-  marginBottom: "0.1rem",
+  marginTop: "0.3rem",
+  marginBottom: "0.3rem"
 };
