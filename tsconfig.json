@@ -36,5 +36,4 @@
     "esm": true
   },
   "include": ["src"],
-  // "exclude": ["src/custom.s.ts"]
 }
