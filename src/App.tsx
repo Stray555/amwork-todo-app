@@ -10,7 +10,7 @@ const App: React.FC = () => {
         align="center"
         justify="center"
         direction="column"
-        sx={{ margin: "0", width: "100%" }}
+        sx={{ margin: "0", width: "100%", overflow: "hidden" }}
       >
         <TodoHeader />
         <TodoList />

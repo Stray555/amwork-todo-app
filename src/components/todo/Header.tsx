@@ -7,15 +7,13 @@ import SquareChip from "./SquareChip";
 
 const Header: React.FC = observer(() => {
   return (
-    <header >
-      <Flex sx={{ width: "320px" }} gap="sm">
-        <Text color="primary-green.0">Today</Text>
-        <Flex gap="sm" sx={{ marginLeft: "auto" }}>
-          <PlusIcon />
-          <SquareChip number={TodoStore.loadedTasks} />
-        </Flex>
+    <Flex sx={{ width: "320px" }} gap="sm">
+      <Text color="primary-green.0">Today</Text>
+      <Flex gap="sm" sx={{ marginLeft: "auto" }}>
+        <PlusIcon />
+        <SquareChip number={TodoStore.loadedTasks} />
       </Flex>
-    </header>
+    </Flex>
   );
 });
 

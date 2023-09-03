@@ -2,7 +2,7 @@ import React from "react";
 import { Checkbox, Card, Box, Flex, Text, Badge, Avatar } from "@mantine/core";
 import { ReactComponent as Triangle } from "@assets/triangle.svg";
 import { observer } from "mobx-react";
-import avatarUrl from "@assets/avatar.jpg";
+import avatarUrl from "@assets/avatar.png";
 import { Todo } from "@interfaces/todo/TodoTypes";
 import TodoStore from "@stores/TodoStore";
 import { format } from "date-fns";
@@ -25,6 +25,7 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
         width: "320px",
         borderRadius: "7px",
         margin: "0.5rem 1rem",
+        flexShrink: 0,
         boxShadow:
           "0px 1px 2px 0px #D0DAEB, 0px 0px 0px 5px rgba(238,244,254, 0.7)",
       }}
@@ -35,11 +36,11 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
           onChange={handleCheckboxChange}
           label={
             <Text
-              sx={{ wordBreak: "break-all" }}
               size="14px"
               transform="capitalize"
               weight="600"
               color="primary-blue.0"
+              truncate
             >
               {title}
             </Text>

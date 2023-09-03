@@ -12,6 +12,8 @@ const TodoList: React.FC = observer(() => {
 
   const { ref, entry } = useIntersection({
     root: containerRef.current,
+    threshold: 0,
+    rootMargin: '0px',
   });
 
   useEffect(() => {
@@ -33,20 +35,25 @@ const TodoList: React.FC = observer(() => {
     <Box
       aria-label="Todo list"
       sx={{
-        overflow: "hidden",
+        overflowX: "hidden",
+        // Inside scroll
+        overflowY: "auto",
         display: "flex",
         flexDirection: "column",
+        // Fixed height
+        height: "1200px"
       }}
     >
       {TodoStore.todos.map((todo) => (
         <TodoCard key={todo.id} todo={todo} />
       ))}
+      {/* div for intersection */}
+      <Box sx={{minHeight: "20px", width: '100%'}} ref={ref} ></Box>
       {TodoStore.isLoading ? (
         <Flex justify="center">
           <Loader color="primary-blue.0" variant="dots" />
         </Flex>
       ) : null}
-      <div ref={ref} />
     </Box>
   );
 });
