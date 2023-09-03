@@ -15,5 +15,4 @@ export const fetchTodos = ({ page, limit }: FetchTodosParams) => {
         _limit: limit,
       },
     })
-    // .then((response) => response.data);
 };
