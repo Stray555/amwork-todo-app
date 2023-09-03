@@ -36,4 +36,5 @@
     "esm": true
   },
   "include": ["src"],
+  "exclude": ["node_modules", "src/custom.s.ts"]
 }
