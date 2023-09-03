@@ -35,13 +35,19 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
           checked={completed}
           onChange={handleCheckboxChange}
           label={
+            // ellipsis after third line
             <Text
-              sx={{ width: "260px" }}
+              sx={{ width: "260px",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical"
+             }}
               size="14px"
               transform="capitalize"
               weight="600"
               color="primary-blue.0"
-              truncate
             >
               {title}
             </Text>
