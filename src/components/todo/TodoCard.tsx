@@ -27,7 +27,7 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
         margin: "0.5rem 1rem",
         flexShrink: 0,
         boxShadow:
-          "0px 1px 2px 0px #D0DAEB, 0px 0px 0px 5px rgba(238,244,254, 0.7)",
+          "0px 1px 2px 0px #D0DAEB, 0px 0px 0px 5px rgba(238,244,254, 0.7)"
       }}
     >
       <Flex sx={{ marginBottom: "0.5rem" }}>
@@ -36,6 +36,7 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
           onChange={handleCheckboxChange}
           label={
             <Text
+              sx={{ width: "260px" }}
               size="14px"
               transform="capitalize"
               weight="600"
@@ -45,7 +46,7 @@ const TodoCard: React.FC<TodoCardProps> = observer(({ todo }) => {
               {title}
             </Text>
           }
-        ></Checkbox>
+        />
       </Flex>
       <Flex justify="space-between" gap="sm" sx={{ marginBottom: "0.5rem" }}>
         <Text size="13px" color="primary-green.0">
